@@ -6,10 +6,18 @@
     <title>Space Incremental</title>
 </head>
 <body>
-    <p id="ironCount">0 Iron Mined</p>
-    <button id="mineButton" onclick="mineIron()">Mine Iron</button>
-    <button id="perClickUpgrade" onclick="upgradeIronPerClick()">Upgrade Per Click (per Click 1) Cost: 10 Iron</button>
-
+    <p id="ironCount">0 Iron</p>
+    <div>
+        <button onclick="tab('mineMenu')">Mine Menu</button>
+        <button onclick="tab('upgradeMenu')">Upgrade Menu</button>
+    </div>
+    <div id="mineMenu">
+        <button id="mineButton" onclick="mineIron()">Mine Iron</button>
+    </div>
+    <div id="upgradeMenu">
+        <spam id="perClickUpgrade">Upgrade Per Click (per Click 1)</spam><button id="perClickUpgradeButton" onclick="upgradeIronPerClick()"> Cost: 10 Iron</button><br>
+        <span id="perSecondUpgrade">Upgrade Per Second (per Second 0)</span><button id="perSecondUpgradeButton" onclick="upgradeIronPerSecond()"> Cost: 100 Iron</button>
+    </div>
     <script src="main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>
