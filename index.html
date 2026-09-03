@@ -2,22 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Incremental</title>
+    <title>Unnamed Incremental Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <p id="ironCount">0 Iron</p>
-    <div>
-        <button onclick="tab('mineMenu')">Mine Menu</button>
-        <button onclick="tab('upgradeMenu')">Upgrade Menu</button>
+     <header>
+        <div class="title">Unnamed Incremental Game</div>
+
+        <div class="top-links">
+            <a href="#">Link 2</a>
+            <a href="#">Link 1</a>
+        </div>
+    </header>
+    <div class="headline">
+        <p><span id="woodCount">0</span> Wood +<span id="woodPerSec">0</span>/s</p>
     </div>
-    <div id="mineMenu">
-        <button id="mineButton" onclick="mineIron()">Mine Iron</button>
-    </div>
-    <div id="upgradeMenu">
-        <spam id="perClickUpgrade">Upgrade Per Click (per Click 1)</spam><button id="perClickUpgradeButton" onclick="upgradeIronPerClick()"> Cost: 10 Iron</button><br>
-        <span id="perSecondUpgrade">Upgrade Per Second (per Second 0)</span><button id="perSecondUpgradeButton" onclick="upgradeIronPerSecond()"> Cost: 100 Iron</button>
-    </div>
-    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+    <aside class="sidebar">
+        <a href="#" onclick="tab('mineMenu')">Mine</a>
+        <a href="#" onclick="tab('upgradeMenu')">Shop</a>
+        <a href="#" onclick="tab('researchMenu')">Research</a>
+        <a href="#" onclick="tab('optionsMenu')">Options</a>
+    </aside>
+    <main>
+        <div class="content">
+            <div id="mineMenu">
+                <button id="mineButton" onclick="gatherWood()">Gather Wood</button><br>
+            </div>
+
+            <div id="upgradeMenu">
+                <button onclick="buyWoodClick()">
+                    <span class="btn-line">Click Upgrade : <span id="test1">0</span></span>
+                    <span class="btn-line">Cost : <span id="perClickUpgradeCost">0</span> Wood</span>
+                </button><br>
+                <button onclick="buyWoodUpgradeOne()">
+                    <span class="btn-line">Building 1 : <span id="test2">0</span></span>
+                    <span class="btn-line">Cost : <span id="perSecondUpgradeCost">0</span></span>
+                </button><br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div id="researchMenu">
+                Research goes here
+            </div>
+            <div id="optionsMenu">
+                <button onclick="manualSave()">
+                    Save Game
+                </button>
+                <button onclick="wipeSave()">
+                    !!Wipe Save Game!!
+                </button>
+            </div>
+        </div>
+        <div class="version">
+            <span>0.0.1</span>
+        </div>
+
+    </main>
+    <script src="js/main.js" charset="utf-8" type="text/javascript"></script>
 </body>
 </html>
