@@ -1,2 +1,2 @@
-funny little incremental game
-Try it out here
+funny little incremental game<br>
+Try it out here: https://shinyneko.github.io/Space-Incremental/
